@@ -1,0 +1,7 @@
+backend/.env
+backend/.venv/
+backend/__pycache__/
+backend/qdrant_db/
+backend/uploads/
+backend/venv/
+backend/venv/

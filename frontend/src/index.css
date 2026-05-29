@@ -1,0 +1,96 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+:root {
+  --bg:        #0d0d0f;
+  --bg2:       #141417;
+  --bg3:       #1c1c21;
+  --bg4:       #242429;
+  --border:    #2e2e36;
+  --border2:   #3a3a44;
+  --text:      #e8e8f0;
+  --text2:     #9898aa;
+  --text3:     #5a5a6e;
+  --accent:    #7c6af7;
+  --accent2:   #a596ff;
+  --accent-bg: rgba(124,106,247,0.12);
+  --green:     #3ecf8e;
+  --green-bg:  rgba(62,207,142,0.1);
+  --amber:     #f5a623;
+  --amber-bg:  rgba(245,166,35,0.1);
+  --red:       #f26464;
+  --red-bg:    rgba(242,100,100,0.1);
+  --radius:    10px;
+  --radius-lg: 16px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+ 
+body {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+ 
+h1, h2, h3, h4 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+ 
+button {
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+ 
+input, textarea, select {
+  font-family: 'DM Sans', sans-serif;
+  outline: none;
+}
+ 
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text3); }
+ 
+/* Markdown answer styles */
+.answer-body h1, .answer-body h2, .answer-body h3 {
+  font-family: 'Syne', sans-serif;
+  color: var(--text);
+  margin: 1.2em 0 0.5em;
+}
+.answer-body h1 { font-size: 1.2rem; }
+.answer-body h2 { font-size: 1.05rem; }
+.answer-body h3 { font-size: 0.95rem; color: var(--text2); }
+.answer-body p { margin-bottom: 0.75em; color: var(--text); }
+.answer-body ul, .answer-body ol { padding-left: 1.4em; margin-bottom: 0.75em; }
+.answer-body li { margin-bottom: 0.3em; }
+.answer-body strong { color: var(--accent2); font-weight: 500; }
+.answer-body code {
+  background: var(--bg4);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 0.88em;
+  color: var(--green);
+}
+.answer-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1em 0;
+}
+ 
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
